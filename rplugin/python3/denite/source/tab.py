@@ -62,6 +62,6 @@ class Source(Base):
             'name' : tab.window.buffer.name
         }
         attr.update({
-            'filetype': self.vim.call('getbufvar', tab.number, '&filetype')
+            'filetype': self.vim.call('getbufvar', tab.window.buffer.number, '&filetype')
         })
         return attr
